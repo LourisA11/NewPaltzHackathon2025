@@ -17,7 +17,7 @@ isSubmitting (boolean)
 
 </div>
 
-    <div id="posts"></div>
+    <div id="post-form"></div>
     <div id="editModal" style="display:none; border: 1px solid #ccc; padding: 16px; margin-top: 20px;">
         <h3>Edit Post</h3>
         <input type="text" id="editTitle" placeholder="Edit Title"><br><br>

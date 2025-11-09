@@ -7,7 +7,9 @@
             Free Food Feed
         </p>
         <div class="">
-            <button> Post Free Food</button>
+            <RouterLink to="/post-form" class="block w-full py-3 bg-indigo-500 text-white font-bold rounded-lg shadow-md hover:bg-indigo-600 transition duration-200">
+             Make a Post
+            </RouterLink>
         </div>
     </div>
 </template>
