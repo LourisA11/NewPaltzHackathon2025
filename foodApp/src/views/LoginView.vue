@@ -22,6 +22,10 @@
         >
           Login
         </button>
+         <RouterLink to="/" class="mt-4 w-full text-sm text-gray-500 hover:text-indigo-600 transition">
+          &larr; Home View
+        </RouterLink>
+      
       </form>
     </div>
   </main>

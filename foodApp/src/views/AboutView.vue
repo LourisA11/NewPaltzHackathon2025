@@ -2,6 +2,9 @@
   <div class="about">
     <h1>This is an about page</h1>
   </div>
+   <RouterLink to="/" class="mt-4 w-full text-sm text-gray-500 hover:text-indigo-600 transition">
+      Home View
+      </RouterLink>
 </template>
 
 <style>
