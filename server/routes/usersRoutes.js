@@ -5,6 +5,7 @@ const users = require('../models/usersModels.js');
 const router = express.Router();
 
 
+
 // GET /api/users
 router.get('/', async (req, res) => {
   try {

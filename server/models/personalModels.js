@@ -43,8 +43,24 @@ async function addPersonalProfile(user_id, user_name, dining_status = 'low') {
   }
 }
 
+async function updateDiningStatus(id, dining_status) {
+  let conn;
+  try {
+    conn = await pool.getConnection();
+    const [result] = await conn.query(
+      'UPDATE personal_profiles SET dining_status = ? WHERE id = ?',
+      [dining_status, id]
+    );
+    return result.affectedRows > 0;
+  } finally {
+    if (conn) conn.release();
+  }
+}
+
 module.exports = {
   getAllPersonalProfiles,
   getPersonalProfileByUserId,
-  addPersonalProfile
+  addPersonalProfile,
+  updateDiningStatus
+  
 };
