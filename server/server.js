@@ -1,10 +1,19 @@
 const express = require('express');
 const usersRoutes = require('./routes/usersRoutes.js');
+const personalRoutes = require('./routes/personalRoutes.js');
+
+
 
 const app = express();
 app.use(express.json());
 
 app.use('/users', usersRoutes);
+app.use('/personal', personalRoutes);
+
+
+
+
+
 console.log('mounted /users');
 
 // Start server
