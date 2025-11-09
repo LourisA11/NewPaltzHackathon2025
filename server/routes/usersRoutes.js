@@ -1,7 +1,9 @@
 const express = require('express');
+
 const users = require('../models/usersModels.js');
 
 const router = express.Router();
+
 
 // GET /api/users
 router.get('/', async (req, res) => {
@@ -12,11 +14,6 @@ router.get('/', async (req, res) => {
     console.error(err);
     res.status(500).json({ error: 'Server error' });
   }
-});
-
-router.post('/debug', (req, res) => {
-  console.log('POST body:', req.body);
-  res.json({ received: req.body });
 });
 
 // GET /api/users/:id
@@ -33,21 +30,33 @@ router.get('/:id', async (req, res) => {
 
 // POST /api/users
 router.post('/', async (req, res) => {
-
   const { name, email, password, user_type } = req.body;
+
   if (!name || !email || !password) {
     return res.status(400).json({ error: 'name, email and password are required' });
   }
 
   try {
-    if (!(await users.isEmailAvailable(email))) return res.status(409).json({ error: 'Email already in use' });
-    if (!(await users.isUserAvailable(name))) return res.status(409).json({ error: 'Username already in use' });
+    if (!(await users.isEmailAvailable(email))) {
+      return res.status(409).json({ error: 'Email already in use' });
+    }
+    if (!(await users.isUserAvailable(name))) {
+      return res.status(409).json({ error: 'Username already in use' });
+    }
 
-    const id = await users.addUser(name, email, password, user_type);
+    const id = await users.addUser(name, email, password, user_type); // uses pool internally
+    // Automatically insert into the correct profile table
+    if (user_type === 'personal') {
+      await personalProfiles.addPersonalProfile(id, name, 'low');
+    } else if (user_type === 'club') {
+      await clubProfiles.addClubProfile(id, name, '');
+    } else if (user_type === 'business') {
+      await businessProfiles.addBusinessProfile(id, name, '');
+    }
     res.status(201).json({ id });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'Server error' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: error.message });
   }
 });
 
