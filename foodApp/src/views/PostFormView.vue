@@ -4,19 +4,17 @@ location
 message
 isSubmitting (boolean)
 <template>
-
+    <main class="post-form-view flex items-center justify-center min-h-screen bg-gray-100">
  <div>
 <form id="postForm">
-    <label for="title">Title:</label><br>
-    <input type="text" id="title" name="title"><br>
-    <label for="content">Content:</label><br>
-    <textarea id="content" name="content"></textarea><br>
+    <label for="title">Location:</label><br>
+    <input type="text" id="title" name="title" placeholder="Address ex: SH 181"><br>
+    <label for="content">Message:</label><br>
+    <textarea id="content" name="content" placeholder = "Describe the food available."></textarea><br>
     <input type="submit" value="Post">
 </form>
-
-
 </div>
-
+</main>
     <div id="post-form"></div>
     <div id="editModal" style="display:none; border: 1px solid #ccc; padding: 16px; margin-top: 20px;">
         <h3>Edit Post</h3>
