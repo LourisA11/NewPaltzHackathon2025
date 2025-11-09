@@ -4,6 +4,7 @@ location
 message
 isSubmitting (boolean)
 <template>
+    <main class="post-form-view flex items-center justify-center min-h-screen bg-gray-100">
  <div>
 <form id="postForm">
     <label for="title">Location:</label><br>
@@ -12,10 +13,8 @@ isSubmitting (boolean)
     <textarea id="content" name="content" placeholder = "Describe the food available."></textarea><br>
     <input type="submit" value="Post">
 </form>
-
-
 </div>
-
+</main>
     <div id="post-form"></div>
     <div id="editModal" style="display:none; border: 1px solid #ccc; padding: 16px; margin-top: 20px;">
         <h3>Edit Post</h3>
