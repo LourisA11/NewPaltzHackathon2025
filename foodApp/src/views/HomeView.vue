@@ -11,7 +11,7 @@ import { RouterLink } from 'vue-router'
       Connecting surplus resources with those in need...
     </p>
     <div class="space-y-4">
-      <RouterLink to="CreateAccountView.vue" class="block w-full py-3 bg-indigo-500 text-white font-bold rounded-lg shadow-md hover:bg-indigo-600 transition duration-200">
+      <RouterLink to="/create-account" class="block w-full py-3 bg-indigo-500 text-white font-bold rounded-lg shadow-md hover:bg-indigo-600 transition duration-200">
         Create Account
       </RouterLink>
       <RouterLink to="/login" class="block w-full py-3 bg-gray-600 text-white font-bold rounded-lg shadow-md hover:bg-gray-700 transition duration-200">
