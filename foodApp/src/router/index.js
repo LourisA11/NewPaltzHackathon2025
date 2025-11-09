@@ -27,6 +27,9 @@ const router = createRouter({
     {
       path: '/about', name: 'about', component: AboutView,
     },
+   // {
+     // path: '/post-item', name: 'post-item', component: PostFormView,
+   // }
   ]
 })
 
