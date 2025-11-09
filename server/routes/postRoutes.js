@@ -1,6 +1,6 @@
+// routes/postRoutes.js
 const express = require('express');
 const postModel = require('../models/postModels.js');
-
 const router = express.Router();
 
 // GET all posts

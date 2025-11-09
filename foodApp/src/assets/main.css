@@ -1,7 +1,10 @@
-@import './base.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
 /* 
 body {
   background-color: rgb(34, 40, 44);
