@@ -79,10 +79,10 @@ const handleSignup = (event) => {
           type="submit"
           class="w-full bg-blue-600 text-white py-2 rounded-md font-semibold hover:bg-blue-700 transition"
         >
-          Create Account
+          Create Account (press to see some function)
         </button>
         <RouterLink to="/dashboard" class="block w-full py-3 bg-gray-600 text-white font-bold rounded-lg shadow-md hover:bg-gray-700 transition duration-200">
-          Dashboard
+          Dashboard (DEMO: click here for next page)
       </RouterLink>
         
         <RouterLink to="/" class="mt-4 w-full text-sm text-gray-500 hover:text-blue-600 transition block pt-2">

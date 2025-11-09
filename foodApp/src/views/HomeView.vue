@@ -7,8 +7,8 @@ import { RouterLink } from 'vue-router'
     <h1 class="text-6xl font-extrabold text-green-700 mb-4">
       New Paltz Pantry
     </h1>
-    <p class="text-lg text-gray-600 font-medium mb-12 max-w-md mx-auto">
-      Combating food waste and hunger in our community.
+    <p class="">
+      Combating food waste and food insecurity in our community.
     </p>
     <div class="space-y-4">
       <RouterLink to="/create-account" class="block w-full py-3 bg-indigo-500 text-white font-bold rounded-lg shadow-md hover:bg-indigo-600 transition duration-200">
@@ -18,8 +18,8 @@ import { RouterLink } from 'vue-router'
         Log In
       </RouterLink>
       <RouterLink to="/about" class="block w-full py-3 bg-amber-500 text-white font-bold rounded-lg shadow-md hover:bg-amber-600 transition duration-200">
-        About Us
-      </RouterLink>
+        About 
+       </RouterLink>
     </div>
   </div>
 </template>
