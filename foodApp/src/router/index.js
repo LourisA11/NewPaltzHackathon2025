@@ -6,7 +6,8 @@ import LoginView from '../views/LoginView.vue'
 import CreateAccountView from '../views/CreateAccountView.vue'
 import AboutView from '../views/AboutView.vue'
 // Rename HomeMain to DashboardView
-//import DashboardView from '../views/DashboardView.vue'
+import DashboardView from '../views/DashboardView.vue'
+import PostFormView from '../views/PostFormView.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -27,6 +28,9 @@ const router = createRouter({
     {
       path: '/about', name: 'about', component: AboutView,
     },
+    {
+      path: '/post-form', name: 'post-form', component: PostFormView,
+   },
   ]
 })
 

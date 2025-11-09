@@ -2,7 +2,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* 
+body {
+  background-color: rgb(34, 40, 44);
+  color: rgb(215, 232, 226);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
 #app {
   max-width: 1280px;
   margin: 0 auto;
@@ -35,4 +43,4 @@ a,
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
   }
-}
+} */
